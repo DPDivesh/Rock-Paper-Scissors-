@@ -1,7 +1,7 @@
 let playerWinCount= 0;
 let computerWinCount = 0; 
 let itsATIE = 0;
- 
+
 function winCount(result){
   if (computerWinCount < 5 || playerWinCount < 5){
     if (result === 0){
