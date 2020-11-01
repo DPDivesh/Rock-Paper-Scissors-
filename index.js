@@ -17,8 +17,8 @@ function winCount(result){
     }
     else if (result === 1){
       computerWinCount = computerWinCount+1;
-      console.log(computerWinCount);
-      if (computerPlay == 5 ) {
+      console.log(computerWinCount,"computer wins");
+      if (computerWinCount == 5 ) {
         console.log("Computer Wins")
       }
       else{
@@ -80,7 +80,7 @@ function playerInput(){
     let playerSelection = prompt("Please Enter a Rock, Paper or Scissors");
     //let regex = /^[a-zA-z]+$/g; attempt at using regex instead(unnesecary for this proj)
     //playerSelection = playerSelection.match(regex);
-    playerSelection.toLowerCase
+    playerSelection = playerSelection.toLowerCase();
     console.log(playerSelection);
   if (playerSelection === "rock"){
     let playerSelection = 1;
