@@ -100,7 +100,7 @@ main{
   text-align: center;
   font-size: 4rem;
   font-family: 'Roboto', sans-serif;
-  ;
+
 }
 
 
@@ -111,3 +111,13 @@ margin-left: 13.7%;
 margin-top: .1%;
 }
 
+.rockShadow:hover {
+  filter: drop-shadow(5px 10px 7px black);
+  text-shadow:12px 2px #484041;}
+  
+  .paperShadow:hover {
+    filter: drop-shadow(5px 10px 7px black);}
+  
+  .scissorShadow:hover {
+    filter: drop-shadow(5px 10px 7px black);}
+  
