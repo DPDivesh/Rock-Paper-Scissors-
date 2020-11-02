@@ -45,7 +45,6 @@ header{
 
 
 
-
 #overlayComputer{
   position: fixed;
   display: none;
@@ -101,6 +100,12 @@ main{
   font-size: 4rem;
   font-family: 'Roboto', sans-serif;
 
+}
+
+#titleRequest.titleRequest h1{
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 

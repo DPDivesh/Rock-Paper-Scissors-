@@ -36,8 +36,10 @@ function winCount(result){
       }
     }
     else {
-      tiedScore = tiedScore++;
-      document.getElementById("tiedScore").innerHTML = computerWinCount;
+      console.log(tiedScore);
+      tiedScore = tiedScore+1;
+      console.log(tiedScore);
+      document.getElementById("tiedScore").innerHTML = tiedScore;
 
 
 
@@ -58,6 +60,7 @@ function onComputer() {
   computerWinCount = 0;
   playerWinCount = 0;
   tiedScore = 0;
+  document.getElementById('titleRequest').innerHTML = ( "Best of Five");
   return computerWinCount, playerWinCount,tiedScore;
 }
 
@@ -67,6 +70,7 @@ function onPlayer() {
   computerWinCount = 0;
   playerWinCount = 0;
   tiedScore = 0;
+  document.getElementById('titleRequest').innerHTML = ( "Best of Five");
   return computerWinCount, playerWinCount,tiedScore;
 }
 
@@ -172,31 +176,37 @@ function selectWinner(computerSelection,playerSelection){
 "rock" > "scissors";// 1 > 3
 */
 if (computerSelection === 1 && playerSelection === 2){
-  console.log( "Paper covers Rock");
+  document.getElementById('titleRequest').innerHTML = ( "Paper covers Rock");
   let playerWins=0;
   return winCount(playerWins);
 }
 else if (computerSelection === 2 && playerSelection === 3){
+  document.getElementById('titleRequest').innerHTML = ( "Scissors cut Paper");
   console.log( "Scissors cut Paper");
   let playerWins=0;
   return winCount(playerWins);
 }
 else if (computerSelection === 1 && playerSelection === 3){
+  document.getElementById('titleRequest').innerHTML = ( "Rock breaks Scissors");
+
   console.log( "Rock breaks Scissors");
   let computerWins=1;
   return winCount(computerWins);
 }
 else if (computerSelection === 2 && playerSelection === 1){
+  document.getElementById('titleRequest').innerHTML = ( "Paper covers Rock");
     console.log( "Paper covers Rock")
     let computerWins=1;
     return winCount(computerWins);;
   }
   else if (computerSelection === 3 && playerSelection === 2){
+    document.getElementById('titleRequest').innerHTML = ( "Scissors cut Paper");
     console.log( "Scissors cuts Paper");
     let computerWins=1;
     return winCount(computerWins);;  
   }
   else if (computerSelection === 3 && playerSelection === 1){
+    document.getElementById('titleRequest').innerHTML = ( "Rock breaks Scissors");
     console.log( "Rock breaks Scissors")
     let playerWins=0;
     return winCount(playerWins);
@@ -204,6 +214,7 @@ else if (computerSelection === 2 && playerSelection === 1){
 
 }else{
   console.log("ITS A TIE")
+  document.getElementById('titleRequest').innerHTML = ( "It's a Tie!");
   return winCount();
 
 }
