@@ -92,21 +92,6 @@ function offPlayer() {
 }
 
 
-//function to initialize variables the computer may choose
-/* New Idea test for computerPlay();
-  let test = 'rock';
-let test2 = 'paper';
-let test3 = 'scissors';
-test2 > test;
-test3 >test2;
-test > test2;
-if (test > test2){
-  console.log("Rock beats Paper");
-}
-else{
-  console.log("ehh");
-}
-*/
 //computer functions
 
   
@@ -129,8 +114,6 @@ function playerInput(selectionClick){
   console.log(selectionClick);
   while (true){
     let playerSelection = selectionClick;
-    //let regex = /^[a-zA-z]+$/g; attempt at using regex instead(unnesecary for this proj)
-    //playerSelection = playerSelection.match(regex);
     playerSelection = playerSelection.toLowerCase();
     console.log(playerSelection);
   if (playerSelection === "rock"){
@@ -151,13 +134,7 @@ function playerInput(selectionClick){
 
   }
 }
-/*
-  switch (true){
-    case playerSelection =="rock":
-      let playerSelection = 1;
-      return playerSelection  
-    case playerSelection == "paper":
-  */    
+
   }
 
   
@@ -170,11 +147,6 @@ function playerInput(selectionClick){
 function selectWinner(computerSelection,playerSelection){
   console.log("player picks: "+playerSelection);
   console.log("computer picks: "+computerSelection);
-/*
-"paper" > "rock"; // 2 > 1  
-"scissors" >"paper";// 3 > 2
-"rock" > "scissors";// 1 > 3
-*/
 if (computerSelection === 1 && playerSelection === 2){
   document.getElementById('titleRequest').innerHTML = ( "Paper covers Rock");
   let playerWins=0;
@@ -223,7 +195,3 @@ else if (computerSelection === 2 && playerSelection === 1){
 
 
 
-
-/*Pause game so its easier to style
-  winCount();
- */
