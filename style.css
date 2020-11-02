@@ -1,15 +1,13 @@
+html{
+  height: 100%;
+}
 body{
+  min-height: 100%;
+  width: 100%;
   margin: 0px;
   padding: 0px;
   background-color: #96E6B3;
 }
-.mainContent{
-  margin: 0px;
-  padding: 0px;
-  height: 87.69%;
-  background-color: #96E6B3;
-}
-
 
 .nav {
   position: fixed;
@@ -17,40 +15,109 @@ body{
   top:0px;
   background-color: #484041;
   width: 100%;
-  height: 12.5.19328125vw;
+  height: 80px;
   z-index: 500;
+  box-shadow: 1px 5px 7px #484041 ;
 }
 
+header{
+  display: block;
+  height: 80px;
+}
 
 .nav li{
   display: inline;
   list-style-type: none;
-  font-size: 4.4vw;
+  font-size: 3.1rem;
   margin-right: 2%;
+  
   
 }
 
-.titleQuestion{
-  position: relative;
-  margin-top: 9%;
+.scoreBottom{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 25%;
+  font-size:  2.1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+#overlayComputer{
+  position: fixed;
+  display: none;
   width: 100%;
   height: 100%;
-  margin-left: 40%;
-  font-size: 300%;
-  line-height: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#overlayPlayer{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+main{
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  width: 100%;
 }
 
 .imagesMid{
-  color: #96E6B3;
-  
-  justify-content: space-between;
   width: 100%;
-  margin-top: 2%;
-  margin-left: 10%;
+  height: 100%;
 }
 
-.imagesMid svg{
-margin:auto;
-width: 20%;
-margin-left: 5%;
+ .titleRequest h1{
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Roboto', sans-serif;
+  ;
 }
+
+
+.imagesMid svg{
+width: 15%;
+height: 100%;
+margin-left: 13.7%;
+margin-top: .1%;
+
+
+}
+
+.rockShadow:hover {
+filter: drop-shadow(5px 10px 7px black);
+text-shadow:12px 2px #484041;}
+
+.paperShadow:hover {
+  filter: drop-shadow(5px 10px 7px black);}
+  
+.scissorShadow:hover {
+  filter: drop-shadow(5px 10px 7px black);}
+  
+ 
