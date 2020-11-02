@@ -1,6 +1,6 @@
 let playerWinCount= 0;
 let computerWinCount = 0; 
-let itsATIE = 0;
+let tiedScore = 0;
 
 function winCount(result){
   if (computerWinCount < 5 || playerWinCount < 5){
@@ -28,7 +28,6 @@ function winCount(result){
         onComputer(computerWinCount,playerWinCount);
         computerWinCount= 0;
         playerWinCount=0;
-        document.getElementById("computerScore").innerHTML = computerWinCount;
 
         return
       }
@@ -37,6 +36,12 @@ function winCount(result){
       }
     }
     else {
+      tiedScore = tiedScore++;
+      document.getElementById("tiedScore").innerHTML = computerWinCount;
+
+
+
+
       return
     }
   }
@@ -50,7 +55,10 @@ else {
 
 function onComputer() {
   document.getElementById("overlayComputer").style.display = "block";
-
+  computerWinCount = 0;
+  playerWinCount = 0;
+  tiedScore = 0;
+  return computerWinCount, playerWinCount,tiedScore;
 }
 
 
@@ -58,7 +66,8 @@ function onPlayer() {
   document.getElementById("overlayPlayer").style.display = "block";
   computerWinCount = 0;
   playerWinCount = 0;
-  return computerWinCount, playerWinCount;
+  tiedScore = 0;
+  return computerWinCount, playerWinCount,tiedScore;
 }
 
 
@@ -66,6 +75,7 @@ function offComputer() {
   document.getElementById("overlayComputer").style.display = "none";
   document.getElementById("computerScore").innerHTML = computerWinCount;
   document.getElementById("playerScore").innerHTML = playerWinCount;
+  document.getElementById("tiedScore").innerHTML = computerWinCount;
 
 }
 
@@ -73,6 +83,7 @@ function offPlayer() {
   document.getElementById("overlayPlayer").style.display = "none";
   document.getElementById("playerScore").innerHTML = playerWinCount;
   document.getElementById("computerScore").innerHTML = computerWinCount;
+  document.getElementById("tiedScore").innerHTML = computerWinCount;
 
 }
 
